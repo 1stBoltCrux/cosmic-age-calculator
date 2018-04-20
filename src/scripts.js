@@ -4,6 +4,7 @@ export class Years {
     this.age = age;
     this.date1 = date1;
     this.date2 = date2;
+
   }
 
   ageToSeconds() {
@@ -15,5 +16,10 @@ export class Years {
     let dateDifference = this.date1 - this.date2
     let differenceInSeconds = dateDifference/1000;
     return differenceInSeconds;
+  }
+
+  mercuryYears() {
+    let mercuryAge = this.age * 4.166666666666667;
+    return Math.round(mercuryAge);
   }
 }

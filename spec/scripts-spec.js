@@ -18,7 +18,15 @@ describe('Date', function() {
     console.log(dates);
     let secondsBetweenDates = dates.dateDifference();
     console.log(secondsBetweenDates);
-    expect(secondsBetweenDates).toEqual(666);
+    expect(secondsBetweenDates).toEqual(946166400);
+    // Example: expect(2).toEqual(2);
+  });
+  it('it should convert age on earth to age on mercury in years', function() {
+    let age2 = new Years(26);
+    console.log(age2);
+    let ageOnMercury = age2.mercuryYears();
+    console.log(ageOnMercury);
+    expect(ageOnMercury).toEqual(666);
     // Example: expect(2).toEqual(2);
   });
 });
