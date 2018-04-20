@@ -1,9 +1,11 @@
 // Business Logic
 export class Years {
-  constructor(age, date1, date2) {
+  constructor(age, date1, date2, lifeExpectancy) {
     this.age = age;
     this.date1 = date1;
     this.date2 = date2;
+    this.lifeExpectancy = lifeExpectancy;
+    this.planetCalc = [1, 4.166666666666667, 1.612903225806452, 0.5319148936170213, 0.0843170320404722];
 
   }
 
@@ -36,5 +38,14 @@ export class Years {
   jupiterYears() {
     let jupiterAge = this.age * 0.0843170320404722;
     return Math.round(jupiterAge);
+  }
+  remainingLifeCalculator() {
+    let expectancyArray = [];
+    for (var i = 0; i < this.planetCalc.length; i++) {
+      let lifeExpectancy = Math.round(this.planetCalc[i] * this.lifeExpectancy);
+      expectancyArray.push(lifeExpectancy);
+
+    }
+    return expectancyArray;
   }
 }
