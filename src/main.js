@@ -10,11 +10,15 @@ $(document).ready(function(){
     let age = $("#age").val();
     let dateRaw1 = $("#date1").val();
     let dateRaw2 = $("#date2").val();
-    var date1 = new Date(dateRaw1);
-    var date2 = new Date(dateRaw2)
-    var cosmicInfo = new Years(age, date2, date1, 79);
+    let date1 = new Date(dateRaw1);
+    let date2 = new Date(dateRaw2)
+    let cosmicInfo = new Years(age, date2, date1, 79);
     let ageInSeconds = cosmicInfo.ageToSeconds();
     let dateDifferenceInSeconds = cosmicInfo.dateDifference();
+    let ageOnMercury = cosmicInfo.mercuryYears();
+    let ageOnVenus = cosmicInfo.venusYears();
+    let ageOnMars = cosmicInfo.marsYears();
+    let ageOnJupiter = cosmicInfo.jupiterYears();
     console.log(ageInSeconds);
     console.log(dateDifferenceInSeconds);
     console.log(cosmicInfo);
