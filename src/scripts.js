@@ -58,6 +58,7 @@ export class Years {
   remainingLifeCalculator() {
     let expectancyPerPlanetArray = [];
     let agePerPlanetArray = [];
+    let noTimeLeftArray =[0, 0, 0, 0, 0];
 
     for (var i = 0; i < this.planetCalc.length; i++) {
       let lifeExpectancyPerPlanet = Math.round(this.planetCalc[i] * this.lifeExpectancy);
@@ -73,8 +74,13 @@ export class Years {
       return item - agePerPlanetArray[index];
       // console.log(timeRemainingArray);
     });
+    if (timeRemainingArray[0] < 0){
+    return noTimeLeftArray;
+  } else {
     return timeRemainingArray;
-      }
+  }
+
+}
 
       overTimeCalculator() {
         let expectancyPerPlanetArray = [];
