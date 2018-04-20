@@ -46,6 +46,7 @@ export class Years {
     let jupiterAge = this.age * this.jupiter;
     return Math.round(jupiterAge);
   }
+
   remainingLifeCalculator() {
     let expectancyPerPlanetArray = [];
     let agePerPlanetArray = [];
@@ -66,6 +67,7 @@ export class Years {
     });
     return timeRemainingArray;
       }
+
       overTimeCalculator() {
         let expectancyPerPlanetArray = [];
         let agePerPlanetArray = [];

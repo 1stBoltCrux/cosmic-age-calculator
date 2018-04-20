@@ -71,7 +71,7 @@ describe('Date', function() {
     console.log(overtime);
     let overTimeArray = overtime.overTimeCalculator();
     console.log(overTimeArray);
-    expect(overTimeArray).toEqual([53, 221, 85, 28, 5]);
+    expect(overTimeArray).toEqual([21, 88, 34, 11, 1]);
     // Example: expect(2).toEqual(2);
   });
 
