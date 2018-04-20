@@ -7,7 +7,18 @@ describe('Date', function() {
     console.log(age);
     let ageInSeconds = age.ageToSeconds();
     console.log(ageInSeconds);
-    expect(ageInSeconds).toEqual(666);
+    expect(ageInSeconds).toEqual(819936000);
+    // Example: expect(2).toEqual(2);
+  });
+
+  it('it should compare two dates and calculate the difference in seconds', function() {
+    let date1 = new Date(2018, 4, 20);
+    let date2 = new Date(1988, 4, 26);
+    let dates = new Years(26, date1, date2);
+    console.log(dates);
+    let secondsBetweenDates = dates.dateDifference();
+    console.log(secondsBetweenDates);
+    expect(secondsBetweenDates).toEqual(666);
     // Example: expect(2).toEqual(2);
   });
 });
