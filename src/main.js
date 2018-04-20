@@ -10,9 +10,10 @@ $(document).ready(function(){
     let age = $("#age").val();
     let dateRaw1 = $("#date1").val();
     let dateRaw2 = $("#date2").val();
+    let lifeExpectancy = $("#demographic").val();
     let date1 = new Date(dateRaw1);
     let date2 = new Date(dateRaw2)
-    let cosmicInfo = new Years(age, date2, date1, 79);
+    let cosmicInfo = new Years(age, date2, date1, lifeExpectancy);
     let ageInSeconds = cosmicInfo.ageToSeconds();
     let dateDifferenceInSeconds = cosmicInfo.dateDifference();
     let ageOnMercury = cosmicInfo.mercuryYears();
