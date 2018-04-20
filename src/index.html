@@ -2,45 +2,47 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Cosmic Calculator</title>
+    <title>Cosmic Death Calculator</title>
   </head>
   <body>
-    <form id="form1" action="index.html" method="post">
-      <div class="formDiv">
-        <div class="form-group">
-          <h3>What is your current Earth age?</h3>
-          <input id="age" class="form-control" type="number" placeholder="Please enter your age">
+    <div class="container">
+      <h1>The Cosmic Death Calculator</h1>
+      <form id="form1" action="index.html" method="post">
+        <div class="formDiv">
+          <div class="form-group">
+            <h3>What is your current Earth age?</h3>
+            <input id="age" class="form-control" type="number" placeholder="Please enter your age">
+          </div>
+          <div class="form-group">
+            <h3>Choose your starting date:</h3>
+            <input id="date1" class="form-control" type="date" required>
+          </div>
+          <div class="form-group">
+            <h3>Choose your ending date:</h3>
+            <input id="date2" class="form-control" type="date">
+          </div>
+          <h3>Choose your demographic and subsequent life expectancy:</h3>
+          <select class="form-control" id="demographic">
+            <option value="92">Wealthy Female, 92 Years</option>
+            <option value="78">Poor Female, 78 Years</option>
+            <option value="88">Wealthy Male, 88 Years</option>
+            <option value="76">Poor Male, 76 Years</option>
+          </select>
         </div>
-        <div class="form-group">
-          <h3>Choose your starting date:</h3>
-          <input id="date1" class="form-control" type="date" required>
-        </div>
-        <div class="form-group">
-          <h3>Choose your ending date:</h3>
-          <input id="date2" class="form-control" type="date">
-        </div>
-        <h3>Choose your demographic:</h3>
-        <select class="form-control" id="demographic">
-          <option value="92">Wealthy Female</option>
-          <option value="78">Poor Female</option>
-          <option value="88">Wealthy Male</option>
-          <option value="76">Poor Male</option>
-        </select>
+        <button type="submit" class="btn btn-info" name="button" required>Submit</button>
+      </form>
+      <div id="output">
+        <p>You have lived <span id="secondsOld"></span> seconds!</p>
+        <p><span id="elapsedSeconds"></span> seconds have elapsed between the two inputted dates!</p>
+        <ul>
+          <li>You are: <span id="mercury"></span> years old on Mercury</li>
+          <li>You are: <span id="venus"></span> years old on Venus</li>
+          <li>You are: <span id="mars"></span> years old on Mars</li>
+          <li>You are: <span id="jupiter"></span> years old on Jupiter</li>
+        </ul>
+        <p id="yearsRemaining"></p>
+        <p id="overTimeYears"></p>
       </div>
-      <button type="submit" class="btn btn-info" name="button" required>Submit</button>
-    </form>
-    <div id="output">
-      <p>You have lived <span id="secondsOld"></span> seconds!</p>
-      <p><span id="elapsedSeconds"></span> seconds have elapsed between the two inputted dates!</p>
-      <ul>
-        <li>You are: <span id="mercury"></span> years old on Mercury</li>
-        <li>You are: <span id="venus"></span> years old on Venus</li>
-        <li>You are: <span id="mars"></span> years old on Mars</li>
-        <li>You are: <span id="jupiter"></span> years old on Jupiter</li>
-      </ul>
-      <p id="yearsRemaining"></p>
-      <p id="overTimeYears"></p>
-
     </div>
   </body>
 </html>

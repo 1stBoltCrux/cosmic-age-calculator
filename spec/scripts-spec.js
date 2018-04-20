@@ -20,6 +20,7 @@ describe('Date', function() {
     expect(secondsBetweenDates).toEqual(946166400);
     // Example: expect(2).toEqual(2);
   });
+
   it('it should convert age on earth to age on mercury in years', function() {
     let age2 = new Years(26);
     console.log(age2);
@@ -28,6 +29,7 @@ describe('Date', function() {
     expect(ageOnMercury).toEqual(108);
     // Example: expect(2).toEqual(2);
   });
+
   it('it should convert age on earth to age on venus in years', function() {
     let age3 = new Years(26);
     console.log(age3);
@@ -45,6 +47,7 @@ describe('Date', function() {
     expect(ageOnMars).toEqual(14);
     // Example: expect(2).toEqual(2);
   });
+
   it('it should convert age on earth to age on jupiter in years', function() {
     let age5 = new Years(26);
     console.log(age5);
@@ -53,6 +56,7 @@ describe('Date', function() {
     expect(ageOnJupiter).toEqual(2);
     // Example: expect(2).toEqual(2);
   });
+
   it('it should push the remaining years user has left on each planet to an array', function() {
     let date4 = new Date(2018, 4, 20);
     let date5 = new Date(1988, 4, 26);

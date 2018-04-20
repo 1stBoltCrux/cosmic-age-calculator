@@ -1,7 +1,7 @@
 // Business Logic
 export class Years {
 
- // -- I had const variables for the values i used to determine year calculations per each planet (this.mercury etc.. below) but they were throwing errors, not sure why, i was using the same syntax in the inspect console in chrome and they were working fine. --
+  // -- I had const variables for the values i used to determine year calculations per each planet (this.mercury etc.. below) but they were throwing errors, not sure why, i was using the same syntax in the inspect console in chrome and they were working fine. --
 
   // const earth = 1;
   // const mercury = 4.166666666666667;
@@ -75,38 +75,38 @@ export class Years {
       // console.log(timeRemainingArray);
     });
     if (timeRemainingArray[0] < 0){
-    return noTimeLeftArray;
-  } else {
-    return timeRemainingArray;
+      return noTimeLeftArray;
+    } else {
+      return timeRemainingArray;
+    }
+
   }
 
-}
+  overTimeCalculator() {
+    let expectancyPerPlanetArray = [];
+    let agePerPlanetArray = [];
+    let overTimeArray = [];
 
-      overTimeCalculator() {
-        let expectancyPerPlanetArray = [];
-        let agePerPlanetArray = [];
-        let overTimeArray = [];
-
-        for (var i = 0; i < this.planetCalc.length; i++) {
-          let lifeExpectancyPerPlanet = Math.round(this.planetCalc[i] * this.lifeExpectancy);
-          expectancyPerPlanetArray.push(lifeExpectancyPerPlanet);
-        }
-        for (var j = 0; j < this.planetCalc.length; j++) {
-          let agePerPlanet = Math.round(this.planetCalc[j] * this.age);
-          agePerPlanetArray.push(agePerPlanet);
-        }
-        let timeRemainingArray = expectancyPerPlanetArray.map(function(item, index){
-          return item - agePerPlanetArray[index];
-          // console.log(timeRemainingArray);
-        });
-        for (var k = 0; k < timeRemainingArray.length; k++) {
-          if (timeRemainingArray[k] < 0) {
-            overTimeArray.push(Math.abs(timeRemainingArray[k]));
-          } else {
-            overTimeArray.push(0);
-          }
-        }
-        return overTimeArray;
-
-          }
+    for (var i = 0; i < this.planetCalc.length; i++) {
+      let lifeExpectancyPerPlanet = Math.round(this.planetCalc[i] * this.lifeExpectancy);
+      expectancyPerPlanetArray.push(lifeExpectancyPerPlanet);
     }
+    for (var j = 0; j < this.planetCalc.length; j++) {
+      let agePerPlanet = Math.round(this.planetCalc[j] * this.age);
+      agePerPlanetArray.push(agePerPlanet);
+    }
+    let timeRemainingArray = expectancyPerPlanetArray.map(function(item, index){
+      return item - agePerPlanetArray[index];
+      // console.log(timeRemainingArray);
+    });
+    for (var k = 0; k < timeRemainingArray.length; k++) {
+      if (timeRemainingArray[k] < 0) {
+        overTimeArray.push(Math.abs(timeRemainingArray[k]));
+      } else {
+        overTimeArray.push(0);
+      }
+    }
+    return overTimeArray;
+
+  }
+}

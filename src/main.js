@@ -7,6 +7,7 @@ import './styles.css';
 $(document).ready(function(){
   $("#form1").submit(function(event) {
     event.preventDefault();
+    $("#output").show();
     let age = $("#age").val();
     let dateRaw1 = $("#date1").val();
     let dateRaw2 = $("#date2").val();
