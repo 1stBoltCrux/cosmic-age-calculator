@@ -32,4 +32,9 @@ export class Years {
     let marsAge = this.age * 0.5319148936170213;
     return Math.round(marsAge);
   }
+
+  jupiterYears() {
+    let jupiterAge = this.age * 0.0843170320404722;
+    return Math.round(jupiterAge);
+  }
 }
