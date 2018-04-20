@@ -1,5 +1,4 @@
 import { Years } from './../src/scripts.js';
-
 describe('Date', function() {
   let age = new Years(26);
   it('should convert years into seconds', function() {
@@ -54,14 +53,26 @@ describe('Date', function() {
     expect(ageOnJupiter).toEqual(2);
     // Example: expect(2).toEqual(2);
   });
-  it('it should push multiple calculated planet life expectancies to an array', function() {
+  it('it should push the remaining years user has left on each planet to an array', function() {
     let date4 = new Date(2018, 4, 20);
     let date5 = new Date(1988, 4, 26);
     let expectancy1 = new Years(26, date4, date5, 79);
     console.log(expectancy1);
     let expectancyArray1 = expectancy1.remainingLifeCalculator();
     console.log(expectancyArray1);
-    expect(expectancyArray1).toEqual([53, 221, 85, 28, 7]);
+    expect(expectancyArray1).toEqual([53, 221, 85, 28, 5]);
     // Example: expect(2).toEqual(2);
   });
+
+  it('it should push the number of years a user is over the planets average life expectancy to an array', function() {
+    let date6 = new Date(2018, 4, 20);
+    let date7 = new Date(1988, 4, 26);
+    let overtime = new Years(100, date6, date7, 79);
+    console.log(overtime);
+    let overTimeArray = overtime.overTimeCalculator();
+    console.log(overTimeArray);
+    expect(overTimeArray).toEqual([53, 221, 85, 28, 5]);
+    // Example: expect(2).toEqual(2);
+  });
+
 });
