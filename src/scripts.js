@@ -1,6 +1,14 @@
 // Business Logic
 export class Years {
 
+ // -- I had const variables for the values i used to determine year calculations per each planet (this.mercury etc.. below) but they were throwing errors, not sure why, i was using the same syntax in the inspect console in chrome and they were working fine. --
+
+  // const earth = 1;
+  // const mercury = 4.166666666666667;
+
+  //etc....
+
+
 
   constructor(age, date1, date2, lifeExpectancy) {
     this.age = age;
