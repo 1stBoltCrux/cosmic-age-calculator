@@ -26,7 +26,15 @@ describe('Date', function() {
     console.log(age2);
     let ageOnMercury = age2.mercuryYears();
     console.log(ageOnMercury);
-    expect(ageOnMercury).toEqual(666);
+    expect(ageOnMercury).toEqual(108);
+    // Example: expect(2).toEqual(2);
+  });
+  it('it should convert age on earth to age on venus in years', function() {
+    let age3 = new Years(26);
+    console.log(age3);
+    let ageOnVenus = age3.venusYears();
+    console.log(ageOnVenus);
+    expect(ageOnVenus).toEqual(666);
     // Example: expect(2).toEqual(2);
   });
 });
