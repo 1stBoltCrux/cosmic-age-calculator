@@ -34,7 +34,16 @@ describe('Date', function() {
     console.log(age3);
     let ageOnVenus = age3.venusYears();
     console.log(ageOnVenus);
-    expect(ageOnVenus).toEqual(666);
+    expect(ageOnVenus).toEqual(42);
+    // Example: expect(2).toEqual(2);
+  });
+
+  it('it should convert age on earth to age on mars in years', function() {
+    let age4 = new Years(26);
+    console.log(age4);
+    let ageOnMars = age4.marsYears();
+    console.log(ageOnMars);
+    expect(ageOnMars).toEqual(666);
     // Example: expect(2).toEqual(2);
   });
 });

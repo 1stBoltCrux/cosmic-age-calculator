@@ -27,4 +27,9 @@ export class Years {
     let venusAge = this.age * 1.612903225806452;
     return Math.round(venusAge);
   }
+
+  marsYears() {
+    let marsAge = this.age * 0.5319148936170213;
+    return Math.round(marsAge);
+  }
 }
