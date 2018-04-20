@@ -13,16 +13,24 @@
         </div>
         <div class="form-group">
           <label for="born">Choose your starting date:</label>
-          <input id="date1" class="form-control" type="date">
+          <input id="date1" class="form-control" type="date" required>
         </div>
         <div class="form-group">
-          <label for="born">Choose your ending date:</label>
+          <label for="born">Choose your ending date:</label required>
           <input id="date2" class="form-control" type="date">
         </div>
       </div>
-      <button type="submit" class="btn btn-info" name="button">Submit</button>
+      <button type="submit" class="btn btn-info" name="button" required>Submit</button>
     </form>
     <div id="output">
+      <p>You have lived <span id="secondsOld"></span> seconds!</p>
+      <p><span id="elapsedSeconds"></span> seconds have elapsed between the two inputted dates!</p>
+      <ul>
+        <li>You are: <span id="mercury"></span> years old on Mercury</li>
+        <li>You are: <span id="venus"></span> years old on Venus</li>
+        <li>You are: <span id="mars"></span> years old on Mars</li>
+        <li>You are: <span id="jupiter"></span> years old on Jupiter</li>
+      </ul>
 
     </div>
   </body>
