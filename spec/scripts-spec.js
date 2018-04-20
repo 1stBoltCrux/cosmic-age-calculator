@@ -61,7 +61,7 @@ describe('Date', function() {
     console.log(expectancy1);
     let expectancyArray1 = expectancy1.remainingLifeCalculator();
     console.log(expectancyArray1);
-    expect(expectancyArray1).toEqual([79, 329, 127, 42, 6]);
+    expect(expectancyArray1).toEqual([53, 221, 85, 28, 7]);
     // Example: expect(2).toEqual(2);
   });
 });

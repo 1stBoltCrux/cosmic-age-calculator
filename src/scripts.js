@@ -40,12 +40,24 @@ export class Years {
     return Math.round(jupiterAge);
   }
   remainingLifeCalculator() {
-    let expectancyArray = [];
-    for (var i = 0; i < this.planetCalc.length; i++) {
-      let lifeExpectancy = Math.round(this.planetCalc[i] * this.lifeExpectancy);
-      expectancyArray.push(lifeExpectancy);
+    let expectancyPerPlanetArray = [];
+    let agePerPlanetArray = [];
 
+    for (var i = 0; i < this.planetCalc.length; i++) {
+      let lifeExpectancyPerPlanet = Math.round(this.planetCalc[i] * this.lifeExpectancy);
+      expectancyPerPlanetArray.push(lifeExpectancyPerPlanet);
     }
-    return expectancyArray;
-  }
-}
+    for (var j = 0; j < this.planetCalc.length; j++) {
+      let agePerPlanet = Math.round(this.planetCalc[j] * this.age);
+      agePerPlanetArray.push(agePerPlanet);
+    }
+    console.log(expectancyPerPlanetArray);
+    console.log(agePerPlanetArray);
+    let timeRemainingArray = expectancyPerPlanetArray.map(function(item, index){
+      return item - agePerPlanetArray[index];
+      // console.log(timeRemainingArray);
+    });
+    console.log(timeRemainingArray);
+      return timeRemainingArray;
+      }
+    }
